@@ -1,0 +1,131 @@
+.shortTiles {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.tile {
+    min-width:280px;
+    max-width: 400px;
+    height: 240px;
+    position: relative;
+    text-align: center;
+    margin: 10px auto 20px;
+
+    @media(min-width: 1240px) {
+        height: 310px;
+    }
+
+
+    &-title {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 10px;
+    }
+
+    &-text {
+        height: 38%;
+        overflow: hidden;  
+    }
+
+    &-arrow {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+        font-size: 24px;
+        font-weight: 400;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 1;
+
+        @media(min-width: 1240px) {
+            font-size: 32px;
+            width: 44px;
+            height: 44px;
+        }
+
+        &-sign {
+            position: relative;
+            z-index: 2;
+            color: rgba(0,0,0,.7);
+            transition: opacity .3s ease-in-out;
+        }
+
+        @media(hover: hover) and (pointer: fine) {
+            &:hover {
+                &::before{
+                    transform: rotate(0deg);
+                }
+                
+                &::after {
+                    transform: translateX(70px);
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                
+                transform: rotate(-75deg);      
+            }
+    
+            &::after {
+                opacity: 0;                
+                transform: translateX(0px);
+            }
+        }   
+
+        &::before {
+            position: absolute;
+            content: '';
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-left: 2px solid rgba(0,0,0,.6);
+            border-radius: 50%;
+            transition: transform .3s ease-in-out;
+            z-index: 1;        
+        }
+
+        &::after {
+            position: absolute;
+            content: 'Czytaj dalej...';
+            font-size: 18px;
+            line-height: 18px;
+            width: 514%;
+            background: rgba(255,255,255,.6);
+            padding: 9px 5px 9px 40px;
+            border-radius: 25px;
+            border-right: 2px solid rgba(0,0,0,.6);
+            transform: translateX(60px);
+            transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+        }
+
+        @media(min-width: 1240px) {
+            font-size: 32px;
+            width: 44px;
+            height: 44px;
+
+            &::after {
+                padding: 13px 5px 13px 40px;
+            }
+        }
+    }
+
+
+    &-bg {
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 60%;
+        background-size: cover;
+        opacity: .32;
+    }
+}

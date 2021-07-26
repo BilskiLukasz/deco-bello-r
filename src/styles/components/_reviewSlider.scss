@@ -1,0 +1,95 @@
+.reviewSlider {
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+    padding: 0 20px;
+
+    &-description {
+        width: 75%;     
+        text-align: center;
+    }
+
+    &-title {
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+
+        @media(min-width: 500px) {
+            font-size: 18px;
+        }
+
+        @media(min-width: 660px) {
+            font-size: 20px;
+        }
+
+        @media(min-width: 1440px) {
+            font-size: 24px;
+        }
+    }
+
+    &-review {
+        margin: 20px 10px;
+        min-height: 126px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-author {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    &-button {
+        display: flex;
+        font-size: 34px;
+        align-self: center;
+        height: max-content;
+        transition: transform .25s ease;           
+        cursor: pointer;
+
+        @media(min-width: 1440px) {
+            font-size: 48px;
+        }
+
+        &-prev:hover {
+            transform: translateX(-10px);
+        }
+
+        &-next:hover {
+            transform: translateX(10px);
+        }
+    }
+}
+
+.slide-from-right {
+    animation: fromRight .5s ease;
+    animation-fill-mode: forwards;
+}
+
+.slide-from-left {
+    animation: fromLeft .5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
