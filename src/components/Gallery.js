@@ -11,7 +11,7 @@ const Gallery = () => {
     },[])
 
     return ( 
-        <div className="gallery margin-section">
+        <div id="gallery" className="gallery margin-section">
         {render &&                     
             <div>
                 <div className="gallery-preview" style={{backgroundImage: `url(${activeImg})`}}>

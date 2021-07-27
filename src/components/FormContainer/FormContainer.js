@@ -2,7 +2,7 @@ import Form from './Form';
 
 const FormContainer = () => {
     return ( 
-        <div className="formContainer-bg">
+        <div id="contact" className="formContainer-bg">
             <div className="width-container formContainer">
                 <Form />
                 <div className="formContainer-msg">

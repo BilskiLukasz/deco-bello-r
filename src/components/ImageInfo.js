@@ -7,7 +7,7 @@ const ImageInfo = () => {
     }
 
     return ( 
-        <div className="imgInfo width-container">   
+        <div id="about" className="imgInfo width-container">   
             <div className="imgInfo-img" style={{backgroundImage: `url(${element.imgUrl})`}}>
                 <p className="imgInfo-title">{element.title}</p>               
             </div>

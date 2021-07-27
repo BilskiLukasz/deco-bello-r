@@ -13,10 +13,10 @@ const NavBar = () => {
             <div className="navbar">
                 <div className="logo"></div>
                 <div className={`menu ${isMenuActive ? "menu-active" : ""}`}>
-                    <MenuItem text="O mnie" delay={0} active={isMenuActive}/>
-                    <MenuItem text="Oferta" delay={1} active={isMenuActive}/>
-                    <MenuItem text="Galeria" delay={2} active={isMenuActive}/>
-                    <MenuItem text="Kontakt" delay={3} active={isMenuActive}/>
+                    <MenuItem href="#about" text="O mnie" delay={0} active={isMenuActive}/>
+                    <MenuItem href="#" text="Oferta" delay={1} active={isMenuActive}/>
+                    <MenuItem href="#gallery" text="Galeria" delay={2} active={isMenuActive}/>
+                    <MenuItem href="#contact" text="Kontakt" delay={3} active={isMenuActive}/>
                 </div>
                 <div className={`hamburger ${isMenuActive ? "hamburger-active" : ""}`} onClick={() => setMenuActive(!isMenuActive)}>
                     <div className="hamburger-bar1"></div>
