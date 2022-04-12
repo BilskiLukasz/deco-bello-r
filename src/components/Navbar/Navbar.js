@@ -13,7 +13,7 @@ const NavBar = () => {
             <div className="navbar">
                 <div className="logo"></div>
                 <div className={`menu ${isMenuActive ? "menu-active" : ""}`}>
-                    <MenuItem href="#about" text="O mnie" delay={0} active={isMenuActive}/>
+                    <MenuItem href="#about" text="O bonifacym" delay={0} active={isMenuActive}/>
                     <MenuItem href="#" text="Oferta" delay={1} active={isMenuActive}/>
                     <MenuItem href="#gallery" text="Galeria" delay={2} active={isMenuActive}/>
                     <MenuItem href="#contact" text="Kontakt" delay={3} active={isMenuActive}/>
